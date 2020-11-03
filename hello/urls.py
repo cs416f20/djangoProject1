@@ -5,5 +5,5 @@ from . import views
 
 # The `urlpatterns` list routes URLs to views.
 urlpatterns = [
-    path('', views.first_function),  # '' indicates nothing included after the localhost address, maps to first_function
+    path('<str:name>', views.greet), # this routes expects a string in the URL so the user has to provide some text in the url like /hello/john
 ]
