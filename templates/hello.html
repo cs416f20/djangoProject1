@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Greeting</title>
 </head>
 <body>
 
     <h1>Hello {{ name }}!</h1>
     <h2>Last name: {{ last_name }}</h2>
+
+    {% for state in states %}
+        <p>State is {{ state }}</p>
+    {% endfor %}
+
+    {% if user_type == "admin" %}
+        <div>Welcome {{ name }}</div>
+    {% elif user_type == 'QA' %}
+        <div>Hello {{ name }}</div>
+    {% endif %}
+
+    {% comment %} This won't be rendered {% endcomment %}
 
 </body>
 </html>

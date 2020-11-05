@@ -19,5 +19,6 @@ from django.urls import path, include
 # The `urlpatterns` list routes URLs to views.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', include('hello.urls')), # after the localhost address if hello/ is detected, map urls in hello.urls
+    path('hello/', include('hello.urls')),
+    path('tasks/', include('tasks.urls'))
 ]
